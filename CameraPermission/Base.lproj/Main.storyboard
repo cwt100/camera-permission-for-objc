@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CB2-tS-bf6">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Xsm-23-WhS"/>
+                                    <constraint firstAttribute="width" constant="200" id="i1K-xU-tAR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuf-tt-kLA">
+                                <rect key="frame" x="107" y="578" width="200" height="30"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="相機"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCameraClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmv-CS-GhB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-eV-8eO">
+                                <rect key="frame" x="107" y="638" width="200" height="30"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="相簿"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAlbumClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyd-AL-SGi"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQx-S2-E3T">
+                                <rect key="frame" x="80" y="144" width="254" height="174"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CB2-tS-bf6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0fk-aJ-3pn"/>
+                            <constraint firstItem="mQx-S2-E3T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0gX-PW-Z8y"/>
+                            <constraint firstItem="3JT-eV-8eO" firstAttribute="centerX" secondItem="Yuf-tt-kLA" secondAttribute="centerX" id="MbU-5g-AmO"/>
+                            <constraint firstItem="3JT-eV-8eO" firstAttribute="leading" secondItem="Yuf-tt-kLA" secondAttribute="leading" id="NU0-zy-yr0"/>
+                            <constraint firstItem="CB2-tS-bf6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O4t-TU-0s0"/>
+                            <constraint firstItem="CB2-tS-bf6" firstAttribute="top" secondItem="mQx-S2-E3T" secondAttribute="bottom" constant="30" id="OtQ-Og-Mc9"/>
+                            <constraint firstItem="3JT-eV-8eO" firstAttribute="top" secondItem="Yuf-tt-kLA" secondAttribute="bottom" constant="30" id="Usv-4B-2U0"/>
+                            <constraint firstItem="mQx-S2-E3T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="XPL-mv-xtx"/>
+                            <constraint firstItem="mQx-S2-E3T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="bjh-4R-1zy"/>
+                            <constraint firstItem="Yuf-tt-kLA" firstAttribute="leading" secondItem="CB2-tS-bf6" secondAttribute="leading" id="fpk-0b-Tha"/>
+                            <constraint firstItem="Yuf-tt-kLA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fwy-0n-uEp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mQx-S2-E3T" secondAttribute="trailing" constant="80" id="i2H-pW-to4"/>
+                            <constraint firstItem="Yuf-tt-kLA" firstAttribute="top" secondItem="CB2-tS-bf6" secondAttribute="bottom" constant="30" id="mq0-Ja-sXj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="albumButton" destination="3JT-eV-8eO" id="5Ye-Fu-wdl"/>
+                        <outlet property="cameraButton" destination="Yuf-tt-kLA" id="Yet-D6-32R"/>
+                        <outlet property="messageTextView" destination="mQx-S2-E3T" id="FMY-Xb-HnR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="113"/>
+        </scene>
+    </scenes>
+</document>
