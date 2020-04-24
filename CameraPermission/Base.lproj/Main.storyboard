@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="albumButton" destination="3JT-eV-8eO" id="5Ye-Fu-wdl"/>
                         <outlet property="cameraButton" destination="Yuf-tt-kLA" id="Yet-D6-32R"/>
+                        <outlet property="imageView" destination="CB2-tS-bf6" id="12N-An-4Wm"/>
                         <outlet property="messageTextView" destination="mQx-S2-E3T" id="FMY-Xb-HnR"/>
                     </connections>
                 </viewController>

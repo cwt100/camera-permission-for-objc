@@ -89,6 +89,16 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
     
+    UIImage *capturePhoto = info[@"UIImagePickerControllerEditedImage"];
+    
+    //compression
+    NSData *data = UIImageJPEGRepresentation(capturePhoto, 0.5);
+    UIImage *resultImage = [UIImage imageWithData:data];
+    
+    if (resultImage != nil) {
+        self.imageView.image = resultImage;
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
