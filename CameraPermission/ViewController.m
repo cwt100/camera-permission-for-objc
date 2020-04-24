@@ -64,6 +64,7 @@
     return [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
 }
 
+#pragma mark Button Action
 - (IBAction)onCameraClicked:(id)sender {
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -87,6 +88,7 @@
     NSLog(@"onAlbumClicked");
 }
 
+#pragma mark - imagePickerController delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
     
     UIImage *capturePhoto = info[@"UIImagePickerControllerEditedImage"];
